@@ -15,7 +15,7 @@
 #. /usr/share/doc/git-core/contrib/hooks/post-receive-email
 
 GIT_REPO=<%= repo_path %>
-TMP_GIT_CLONE=/tmp/<%= $repo %>/jekyll
+TMP_GIT_CLONE=/tmp<%= $repo %>/jekyll
 PUBLIC_WWW=<%= www_root %>/jekyll
 
 git clone $GIT_REPO $TMP_GIT_CLONE
