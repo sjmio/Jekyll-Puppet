@@ -25,7 +25,7 @@ class jekyll (
 	
 	package { ["ruby1.9.1-dev", "rubygems", "python-pygments"]: }
 
-	package { ["jekyll", "rdiscount"]:
+	package { ["jekyll", "rdiscount", "RedCloth"]:
 		provider	=> "gem",
 		require		=> Package["rubygems"]
 	}
@@ -35,7 +35,7 @@ class jekyll (
 		mode	=> 0644,
 		owner	=> root,
 		group	=> root,
-		require	=> Package["jekyll"]
+		require	=> Package["rubygems"]
 	}
 
 	# Configure deploy user
