@@ -18,6 +18,7 @@ class nginx::service {
     command     => "/bin/cat ${nginx::params::nx_temp_dir}/nginx.d/* > ${nginx::params::nx_conf_dir}/conf.d/vhost_autogen.conf",
     refreshonly => true,
     subscribe   => File["${nginx::params::nx_temp_dir}/nginx.d"],
+    notify      => Service["nginx"],
   }
   service { "nginx":
     ensure     => running,
