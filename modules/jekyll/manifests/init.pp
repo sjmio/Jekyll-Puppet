@@ -23,7 +23,7 @@ class jekyll (
 	
 	# Jekyll packages
 	
-	package { ["ruby1.9.1-dev", "rubygems", "python-pygments"]: }
+	package { ["ruby1.9.1-dev", "rubygems", "python-pygments", "libocamlgsl-ocaml-dev", "libgsl-ruby1.8"]: }
 
 	package { ["jekyll", "rdiscount", "RedCloth"]:
 		provider	=> "gem",
