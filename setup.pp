@@ -13,9 +13,8 @@ file { "/var/www":
 	group	=> "www-data"
 }
 
-nginx::resource::vhost { 'jeckyll.local':
+nginx::resource::vhost { 'jekyll.local':
 	ensure		=> present,
-	www_root	=> "$www_root/jeckyll",
-	notify		=> Service["nginx"]
+	www_root	=> "$www_root/jekyll",
 }
 
