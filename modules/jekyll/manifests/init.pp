@@ -26,7 +26,8 @@ class jekyll (
 	package { ["ruby1.9.1-dev", "rubygems", "python-pygments"]: }
 
 	package { ["jekyll", "rdiscount"]:
-		provider	=> "gem"
+		provider	=> "gem",
+		require		=> Package["rubygems"]
 	}
 
 
