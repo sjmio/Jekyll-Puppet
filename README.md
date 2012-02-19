@@ -17,11 +17,11 @@ Install
 Only tested on Ubuntu so far. You'll need puppet and git to get started.
 
 1. Update aptitude and install dependencies:
-   `sudo aptitude update && aptitude install puppet git`
+   `sudo aptitude update && sudo aptitude install puppet git rubygems`
 2. Clone this git repo somewhere on your server
 3. Run puppet agent to configure everything:
    `sudo puppet apply --modulepath=modules setup.pp`
-4. Append your ssh public-key (id_rsa.pub) to the 'deploy' users ~/.ssh/authorized_keys. Note that ssh-copy-id deploy@myserver.com won't work since the deploy user is setup without a password.
+4. Append your ssh public-key (id_rsa.pub) to the 'deploy' users ~/.ssh/authorized_keys. Note that `ssh-copy-id deploy@myserver.com` won't work since the deploy user is setup without a password.
 
 
 Pushing Changes
