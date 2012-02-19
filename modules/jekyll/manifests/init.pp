@@ -30,6 +30,13 @@ class jekyll (
 		require		=> Package["rubygems"]
 	}
 
+	file { "/var/lib/gems/1.8/specifications/directory_watcher-1.4.1.gemspec":
+		source	=> "puppet:///modules/jekyll/directory_watcher-1.4.1.gemspec",
+		mode	=> 0644,
+		owner	=> root,
+		group	=> root,
+		require	=> Package["jekyll"]
+	}
 
 	# Configure deploy user
 	
